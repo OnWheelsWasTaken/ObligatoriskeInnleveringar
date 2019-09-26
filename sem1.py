@@ -1,4 +1,3 @@
-# coding=utf-8
 # Semesteroppgove Vegard Berge
 
 # oppgove 1
@@ -7,8 +6,8 @@
 tall_1 = int(input("Tall nr 1: "))
 tall_2 = int(input("Tall nr 2: "))
 tall_3 = int(input("Tall nr 3: "))
-print("Dine tall var: \n",  "Tall nr 1: " + str(tall_1), "\n Tall nr 2: " + str(tall_2), "\n Tall nr 3: " + str(tall_3))
 
+print("Dine tall var: \n", "Tall nr 1: " + str(tall_1), "\n Tall nr 2: " + str(tall_2), "\n Tall nr 3: " + str(tall_3))
 
 if tall_1 < tall_2 < tall_3:
     print("Disse tallene er stigende. ")
@@ -17,7 +16,7 @@ elif tall_1 > tall_2 > tall_3:
     print("Disse tallene er synkande. ")
 
 else:
-    print("Disse tallene står ikkje i ei rekkefylgje. ")
+    print("Disse tallene stor ikkje i ei rekkefylgje. ")
 
 # oppgave 2a
 
@@ -32,19 +31,18 @@ elif x == 'S':
 elif x == 'C':
     print("Klover")
 
-
-# oppgåve 2b
+# oppgaave 2b
 Kortstokk = {'K': 'Konge', 'Q': 'Dronning', 'J': 'Knekt', '1': 'Ein', '2': 'To', '3': 'Tre', '4': 'Fira', '5': 'Fem',
              '6': 'Seks',
              '7': 'sju', '8': 'aatta', '9': 'Ni', '10': 'Ti', 'A': 'Ess'}
-x = input("Eit kort frå kortstokken takk: ").upper()
+x = input("Eit kort fraa kortstokken takk: ").upper()
 print(Kortstokk[x])
 
-# Bonus! Her har eg kombinert oppgåve 2a og 2b i ein kode som eg syntes var betre.
+# Bonus! Her har eg kombinert oppgaave 2a og 2b i ein kode som eg syntes var betre.
 # Ignorer denne dersom dykkar ikkje tell denne med.
 
 
-kort = input("Skriv inn da kortet du vil at maskina skal tyde (døme 4C = Kløver fira): ").upper()
+kort = input("Skriv inn da kortet du vil at maskina skal tyde (doome 4C = Kloover fira): ").upper()
 liste = list(kort)
 
 
@@ -53,7 +51,7 @@ def dinkorttype(typen):
         "D": "Ruter",
         "H": "Hjerter",
         "S": "Spar",
-        "C": "Kløver"
+        "C": "Kloover"
     }
     verdiane = {
         "A": "Ess",
@@ -63,19 +61,18 @@ def dinkorttype(typen):
         "5": "Fem",
         "6": "Seks",
         "7": "Sju",
-        "8": "Åtte",
+        "8": "Aatte",
         "9": "Ni",
         "10": "Ti",
         "J": "Knekt",
         "Q": "Dame",
         "K": "Konge"
     }
-    # Returnerar riktig verdi basert på brukar-input
+    # Returnerar riktig verdi basert paa brukar-input
     return farge[typen[1]] + " " + verdiane[typen[0]]
 
 
 print(dinkorttype(liste))
-
 
 # oppgave3.a
 kursen = {
@@ -87,18 +84,18 @@ kursen = {
     "NOK": 1.00000
 }
 
-beløp = float(input("Beløp: "))
+belop = float(input("Beloop: "))
 valuta = input("Valutta: ").upper()
 
-print(round((beløp * kursen[valuta]), 2), "NOK")
+print(round((belop * kursen[valuta]), 2), "NOK")
 
 # 3.b
-# Nyttar same dictonary frå 3.a
+# Nyttar same dictonary fraa 3.a
 
-beløp_2 = float(input("Beløp: "))
+belop_2 = float(input("Beloop: "))
 valuta = input("Valutta: ").upper()
 
-print(round((beløp_2 / kursen[valuta]), 2), valuta)
+print(round((belop_2 / kursen[valuta]), 2), valuta)
 
 print()
 
@@ -111,12 +108,12 @@ for n in range(0, 11):
 
 start = int(input("Start: "))
 stopp = int(input("Stop: "))
-vilkaar = int(input("Delelig på: "))
+vilkaar = int(input("Delelig paa: "))
 
 print("Start: ", str(start))
 print("Stop: ", str(stopp))
 print("n: ", str(stopp))
-print("Verdiar mellom", str(start), "og", str(stopp), "som er delelige på", str(vilkaar))
+print("Verdiar mellom", str(start), "og", str(stopp), "som er delelige paa", str(vilkaar))
 
 for n in range(start, stopp + 1):
     if n % vilkaar == 0:
@@ -135,7 +132,7 @@ for n in range(0, 101, 10):
     print("%8d %10d " % (n, tilfahrenheit(n)))
 
 
-# Oppgåve 6b
+# Oppgaave 6b
 
 def tilfahrenheit(celsius):
     return int(celsius * 1.800) + 32
@@ -151,15 +148,14 @@ for n in range(0, 101, 10):
 print()
 print()
 
-#oppgave 7
+# oppgave 7
 
 verdi = float(input("Kor mykje pengar har du: "))
-fraa = float(input("I frå kva år? "))
-til = float(input("Til kva år? "))
+fraa = float(input("I fraa kva aar? "))
+til = float(input("Til kva aar? "))
 
 
 def renteOkning(verdi, fraa, til):
-
     aar = til - fraa
 
     endring = verdi * (1.02 ** aar)
